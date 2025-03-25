@@ -1,0 +1,1 @@
+# tests for main2.py of the root directory

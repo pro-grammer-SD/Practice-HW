@@ -1,0 +1,25 @@
+name: Run Pytest Tests
+
+on: [push, pull_request]  
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13.0'  
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  
+          pip install pytest  
+
+      - name: Run Tests
+        run: pytest tests/ --maxfail=1 --disable-warnings  
