@@ -122,3 +122,4 @@ while True:
     user = input(Fore.YELLOW + "You: " + Style.RESET_ALL).strip().lower()
     if not handle_input(user):
         break
+    
