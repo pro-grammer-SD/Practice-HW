@@ -1,6 +1,5 @@
 import random
 import re
-import time
 from datetime import datetime, timezone
 from colorama import Fore, Style, init
 
